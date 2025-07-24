@@ -8,7 +8,7 @@ import hour from "../assets/hour1.jpg"
 function Events() {
 
     return (
-        <div className="bg-gray-900 w-full">
+        <div className="bg-gray-900 w-full mt-10">
         <h1 className="text-white font-bold text-center text-2xl sm:text-2xl md:text-2xl">Overview About our Events</h1>
       <div className="grid lg:grid lg:grid-cols-2 lg:justify-items-center lg:justify-5 lg:content-center lg:gap-x-0 w-full h-auto  bg-gray-900 justify-center mt-10">
         <Card 

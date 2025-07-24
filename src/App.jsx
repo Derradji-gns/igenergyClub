@@ -6,6 +6,7 @@ import Leaders from './compenants/leaders'
 import Community from './compenants/com'
 import Footer from './compenants/footer'
 import Projects from './compenants/projects'
+import BackgroundBeamsWithCollisionDemo from './compenants/comp'
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
     
       <div className="bg-gray-900">
         <Nav/>
-        <Header/>
+        <BackgroundBeamsWithCollisionDemo/>
         <Events/>
         <Leaders/>
         <Projects/>
