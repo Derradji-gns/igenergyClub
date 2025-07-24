@@ -1,5 +1,6 @@
 import './App.css'
 import Nav from './compenants/nav'
+import Example from './compenants/NNAv'
 import Header from './compenants/header'
 import Events from './compenants/section1'
 import Leaders from './compenants/leaders'
@@ -14,8 +15,9 @@ function App() {
   return (
     
     
-      <div className="bg-gray-900">
-        <Nav/>
+      <div className='bg-gray-900'>
+
+        <Example/>
         <BackgroundBeamsWithCollisionDemo/>
         <Events/>
         <Leaders/>
