@@ -11,6 +11,7 @@ import BackgroundBeamsWithCollisionDemo from './compenants/comp'
 import InfiniteMovingCardsDemo from './compenants/talks'
 import ExpandableCardDemo from './compenants/events'
  import LampDemo from './compenants/tst1'
+ import CarouselDemo from './compenants/mgcd'
 
 function App() {
 
@@ -23,7 +24,7 @@ function App() {
         <BackgroundBeamsWithCollisionDemo/>
         <ExpandableCardDemo/>
         <Leaders/>
-        <Projects/>
+        <CarouselDemo/>
         <InfiniteMovingCardsDemo/>
         <Footer/>
 
