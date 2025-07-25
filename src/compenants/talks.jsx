@@ -6,8 +6,9 @@ import { InfiniteMovingCards } from "../compenants/ui/infinite-moving-cards";
  function InfiniteMovingCardsDemo() {
   return (
     <div
-      className="h-[40rem] rounded-md flex flex-col antialiased  dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-      <InfiniteMovingCards items={testimonials} direction="left" speed="slow" />
+      className="h-[30rem] rounded-md flex flex-col antialiased   items-center justify-center relative overflow-hidden">
+      <h2 className="text-white text-center text-2xl font-bold p-7">Discover our community : </h2>
+      <InfiniteMovingCards items={testimonials} direction="left" speed="fast" />
     </div>
   );
 }

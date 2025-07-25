@@ -9,7 +9,7 @@ import Footer from './compenants/footer'
 import Projects from './compenants/projects'
 import BackgroundBeamsWithCollisionDemo from './compenants/comp'
 import InfiniteMovingCardsDemo from './compenants/talks'
-
+import ExpandableCardDemo from './compenants/events'
 
 function App() {
 
@@ -20,7 +20,7 @@ function App() {
 
         <Example/>
         <BackgroundBeamsWithCollisionDemo/>
-        <Events/>
+        <ExpandableCardDemo/>
         <Leaders/>
         <Projects/>
         <InfiniteMovingCardsDemo/>
