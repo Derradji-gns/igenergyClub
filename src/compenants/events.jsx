@@ -3,7 +3,11 @@
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "../compenants/ui/use-outside-click";
-import tech from "/public/graphics/av.jpg";
+import tech from "../assets/tech-pic.jpg";
+import IT from '/public/graphics/model2.jpg'
+import SP from '/public/graphics/space.jpg'
+import TCH from '/public/graphics/teach.png'
+import HRC from '../assets/hour-logo.jpg'
 
 function ExpandableCardDemo() {
   const [active, setActive] = useState(null);
@@ -111,13 +115,14 @@ function ExpandableCardDemo() {
           </div>
         ) : null}
       </AnimatePresence>
+      <h2 className="text-center text-white p-10 text-2xl font-bold ">Overview About our events :</h2>
 
       <ul className="max-w-2xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 items-start gap-4">
         {cards.map((card, index) => (
           <motion.div
             key={index}
             onClick={() => setActive(card)}
-            className="p-4 flex flex-col hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+            className="p-4 flex flex-col  rounded-xl cursor-pointer"
           >
             <div className="flex gap-4 flex-col w-full ">
               <motion.div>
@@ -183,49 +188,45 @@ problem-solving tasks, fostering innovation, collaboration, and technical expert
   },
   {
     description: "IT Day",
-    src: tech,
+    src: IT,
     ctaText: "Visit",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => (
       <p>
-        Babu Maan is a legendary Punjabi singer known for his soulful voice and
-        profound lyrics, capturing the essence of Punjabi culture.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi pariatur, dolor porro, ipsam, quas provident quidem iste quod adipisci perferendis saepe eaque aliquid exercitationem eveniet voluptates repellendus reiciendis quae? Suscipit, architecto? Itaque accusamus saepe ullam porro, similique velit laudantium dicta sequi fugit iure distinctio iste reiciendis quaerat unde suscipit ad maxime tempora? Sint ducimus iure maiores cumque. Adipisci eum, iusto doloremque aperiam modi praesentium similique, sapiente tenetur, quam eligendi expedita!
       </p>
     ),
   },
   {
     description: "Energy Space",
-    src: tech,
+    src: SP,
     ctaText: "Visit",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => (
       <p>
-        Metallica is a heavy metal icon whose songs reflect themes of
-        aggression, social issues, and personal struggles.
+       A space for communication and sharing elecrtonic projects between members
       </p>
     ),
   },
   {
     description: "Teach Me How ?",
-    src: tech,
+    src: TCH,
     ctaText: "Visit",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => (
       <p>
-        Himesh Reshammiya is a Bollywood composer and singer known for his
-        distinctive voice and blend of traditional and modern styles.
+        Workshops and an opportunity to develop club members and acquire new skills
       </p>
     ),
   },
   {
     description: "Hour Of Code",
-    src: tech,
+    src: HRC,
     ctaText: "Visit",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => (
       <p>
-        Metallica continues to inspire with powerful sound and intense
-        performances. A legend of American heavy metal.
+        Teaching members programming languages and problem solving 
       </p>
     ),
   },

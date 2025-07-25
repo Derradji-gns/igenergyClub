@@ -10,6 +10,7 @@ import Projects from './compenants/projects'
 import BackgroundBeamsWithCollisionDemo from './compenants/comp'
 import InfiniteMovingCardsDemo from './compenants/talks'
 import ExpandableCardDemo from './compenants/events'
+ import LampDemo from './compenants/tst1'
 
 function App() {
 
