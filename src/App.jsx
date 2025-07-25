@@ -8,6 +8,7 @@ import Community from './compenants/com'
 import Footer from './compenants/footer'
 import Projects from './compenants/projects'
 import BackgroundBeamsWithCollisionDemo from './compenants/comp'
+import InfiniteMovingCardsDemo from './compenants/talks'
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
         <Events/>
         <Leaders/>
         <Projects/>
-        <Community/>
+        <InfiniteMovingCardsDemo/>
         <Footer/>
 
     
