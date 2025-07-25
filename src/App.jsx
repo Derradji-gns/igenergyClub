@@ -12,6 +12,7 @@ import InfiniteMovingCardsDemo from './compenants/talks'
 import ExpandableCardDemo from './compenants/events'
  import LampDemo from './compenants/tst1'
  import CarouselDemo from './compenants/mgcd'
+ import Foooter from './compenants/Foooter'
 
 function App() {
 
@@ -26,7 +27,7 @@ function App() {
         <Leaders/>
         <CarouselDemo/>
         <InfiniteMovingCardsDemo/>
-        <Footer/>
+        <Foooter/>
 
     
 
