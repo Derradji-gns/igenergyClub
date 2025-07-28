@@ -13,6 +13,7 @@ import ExpandableCardDemo from './compenants/events'
  import LampDemo from './compenants/tst1'
  import CarouselDemo from './compenants/mgcd'
  import Foooter from './compenants/Foooter'
+ import TimelineDemo from './compenants/time'
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
         <ExpandableCardDemo/>
         <Leaders/>
         <CarouselDemo/>
+        <TimelineDemo/>
         <InfiniteMovingCardsDemo/>
         <Foooter/>
 
