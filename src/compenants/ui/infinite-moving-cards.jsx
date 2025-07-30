@@ -1,101 +1,119 @@
 "use client";
 
+import React, { useEffect, useState, useRef } from "react";
 import { cn } from "./lib/utils.jsx";
-import React, { useEffect, useState } from "react";
+import TweetCard from "../tweet.jsx"; 
 
 export const InfiniteMovingCards = ({
-  items,
   direction = "left",
   speed = "fast",
   pauseOnHover = true,
   className
 }) => {
-  const containerRef = React.useRef(null);
-  const scrollerRef = React.useRef(null);
+  const containerRef = useRef(null);
+  const scrollerRef = useRef(null);
+  const [start, setStart] = useState(false);
 
   useEffect(() => {
     addAnimation();
   }, []);
-  const [start, setStart] = useState(false);
+
+
+const tweets = [
+  {
+    name: "Derradji Amine",
+    username: "amine_dev",
+    content: "For me IGENERGY was a great opportunity to show my abilities and practise all what I learn before .",
+    time: "10:05 AM · May 09, 2025",
+    profileImg: "public/graphics/me.jpg",
+  },
+
+    {
+    name: "Hadjij Chourouk",
+    username: "Hadjij_sun",
+    content: "نحن دائما نسعى لتقديم أفضل ما نملك من أجل إحياء روح الفريق و المضي قُدمًا نحو فرص جديدة . هذه عائلتنا ❤️",
+    time: "10:05 AM · Dec 19, 2024",
+    profileImg: "public/graphics/sun.jpg",
+  },
+  {
+    name: "Benouali Omar Walid",
+    username: "Walid_exP",
+    content: "IGENERGY n'est pas seulement un club, c'est une famille où chacun trouve sa place et grandit ensemble ! ❤️🙂",
+        time: "10:05 AM · Fev 24, 2022",
+    profileImg: "public/graphics/walid.jpg",
+  },
+  {
+    name: "Bouarroudj Meriem",
+    username: "meri_design",
+    content: "At IGEnergy, success is built on unity and collaboration. Differences in opinions and perspectives are natural, but progress comes when we set aside conflicts, work together with respect and determination.",
+    time: "10:05 AM · Dec 19, 2020",
+    profileImg: "public/graphics/meriem.jpg",
+  },
+  {
+    name: "Bendriss Anis",
+    username: "anis_president",
+    content: "At IGEnergy, work is driven by passion, innovation, and collaboration. Every effort contributes to a shared vision of excellence and progress. ✨️",
+    time: "10:05 AM · Dec 19, 2020",
+    profileImg:"public/graphics/anis.jpg",
+  },
+];
+
+
   function addAnimation() {
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children);
-
       scrollerContent.forEach((item) => {
         const duplicatedItem = item.cloneNode(true);
-        if (scrollerRef.current) {
-          scrollerRef.current.appendChild(duplicatedItem);
-        }
+        scrollerRef.current.appendChild(duplicatedItem);
       });
 
-      getDirection();
-      getSpeed();
+      setDirection();
+      setSpeed();
       setStart(true);
     }
   }
-  const getDirection = () => {
+
+  const setDirection = () => {
     if (containerRef.current) {
-      if (direction === "left") {
-        containerRef.current.style.setProperty("--animation-direction", "forwards");
-      } else {
-        containerRef.current.style.setProperty("--animation-direction", "reverse");
-      }
+      containerRef.current.style.setProperty(
+        "--animation-direction",
+        direction === "left" ? "forwards" : "reverse"
+      );
     }
   };
-  const getSpeed = () => {
+
+  const setSpeed = () => {
     if (containerRef.current) {
-      if (speed === "fast") {
-        containerRef.current.style.setProperty("--animation-duration", "20s");
-      } else if (speed === "normal") {
-        containerRef.current.style.setProperty("--animation-duration", "40s");
-      } else {
-        containerRef.current.style.setProperty("--animation-duration", "80s");
-      }
+      const duration =
+        speed === "fast" ? "20s" : speed === "normal" ? "40s" : "80s";
+      containerRef.current.style.setProperty("--animation-duration", duration);
     }
   };
+
   return (
     <div
       ref={containerRef}
       className={cn(
         "scroller relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className
-      )}>
-      <ul
-        ref={scrollerRef}
-        className={cn(
-          "flex w-max min-w-full shrink-0 flex-nowrap gap-4 py-4",
-          start && "animate-scroll",
-          pauseOnHover && "hover:[animation-play-state:paused]"
-        )}>
-        {items.map((item) => (
-          <li
-            className="relative w-[350px] max-w-full shrink-0 rounded-2xl border border-b-0 border-zinc-600  px-8 py-6 md:w-[450px] shadow-lg shadow-black/30   dark:border-zinc-700 bg-gray-600"
-            key={item.name}>
-            <blockquote>
-              <div
-                aria-hidden="true"
-                className="user-select-none pointer-events-none absolute -top-0.5 -left-0.5 -z-1 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"></div>
-              <span
-                className="relative z-20 text-sm leading-[1.6] font-normal text-white dark:text-white">
-                {item.quote}
-              </span>
-              <div className="relative z-20 mt-6 flex flex-row items-center">
-                <span className="flex flex-col gap-1">
-                  <span
-                    className="text-sm leading-[1.6] font-extrabold font-serif text-white dark:text-white">
-                    {item.name}
-                  </span>
-                  <span
-                    className="text-sm leading-[1.6] font-serif font-light text-gray-200 dark:text-gray-200">
-                    {item.title}
-                  </span>
-                </span>
-              </div>
-            </blockquote>
-          </li>
-        ))}
-      </ul>
+      )}
+    >
+     <ul
+  ref={scrollerRef}
+  className={cn(
+    "flex w-max min-w-full shrink-0 flex-nowrap gap-4 py-4",
+    start && "animate-scroll",
+    pauseOnHover && "hover:[animation-play-state:paused]"
+  )}
+>
+  {tweets.map((tweet, idx) => (
+    <li key={idx} className="w-120 md:w-[450px] shrink-0">
+      <TweetCard {...tweet} />
+    </li>
+  ))}
+</ul>
     </div>
   );
 };
+
 

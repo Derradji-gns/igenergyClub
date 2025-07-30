@@ -21,7 +21,7 @@ export default function Example() {
                   src={pic}
                   className="h-12 w-auto"
                 />
-                <span className="text-xl font-semibold text-white">Igenergy</span>
+                <span className="text-xl font-semibold font-[serif] text-white">IGENERGY</span>
               </div>
 
               {/* Desktop: Sign in / Create account */}

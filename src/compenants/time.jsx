@@ -31,7 +31,7 @@ export default function TimelineDemo() {
       content: (
         <div>
           <p
-            className="mb-8 text-sm font-normal text-white md:text-xl ">
+            className="mb-8 text-sm font-normal text-white font-[serif] md:text-xl ">
             Exploratory journey to Tafraoui was rich in adventures
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -68,7 +68,7 @@ export default function TimelineDemo() {
       content: (
         <div>
           <p
-            className="mb-8 text-sm font-normal text-white md:text-xl">
+            className="mb-8 text-sm font-normal text-white font-[serif] md:text-xl">
             Visit for high school students to introduce them to the field of telecom
           </p>
           
@@ -106,7 +106,7 @@ export default function TimelineDemo() {
       content: (
         <div>
           <p
-            className="mb-8 text-sm font-normal text-white md:text-xl">
+            className="mb-8 text-sm font-normal font-[serif] text-white md:text-xl">
             Djezzy Workshops , amazing collaboration
           </p>
           
@@ -145,7 +145,7 @@ export default function TimelineDemo() {
       content: (
         <div>
           <p
-            className="mb-8 text-sm font-normal text-white md:text-xl">
+            className="mb-8 text-sm font-normal font-[serif] text-white md:text-xl">
             IGE45 Farewell , Great promotion
           </p>
           
@@ -184,7 +184,7 @@ export default function TimelineDemo() {
       content: (
         <div>
           <p
-            className="mb-8 text-sm font-normal text-white md:text-xl">
+            className="mb-8 text-sm font-normal font-[serif] text-white md:text-xl">
             Khotwa event, Great participation
           </p>
           

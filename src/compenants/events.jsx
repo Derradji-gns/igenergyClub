@@ -79,7 +79,7 @@ function ExpandableCardDemo() {
                 <div className="flex justify-between items-start p-4">
                   <motion.p
                     layoutId={`description-${active.description}-${id}`}
-                    className="text-black dark:text-black text-base"
+                    className="text-black font-[serif] dark:text-black text-base"
                   >
                     {active.description}
                   </motion.p>
@@ -115,7 +115,7 @@ function ExpandableCardDemo() {
           </div>
         ) : null}
       </AnimatePresence>
-      <h2 className="text-center text-white p-10 text-2xl font-bold ">Overview About our events :</h2>
+      <h2 className="text-center text-white p-10 text-2xl font-bold font-[serif] ">Overview About our events :</h2>
 
       <ul className="max-w-2xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 items-start gap-4">
         {cards.map((card, index) => (
@@ -133,10 +133,10 @@ function ExpandableCardDemo() {
                   className="h-60 w-full rounded-xl object-cover  object-top shadow-xl/20"
                 />
               </motion.div>
-              <div className="flex justify-center items-center flex-col">
+              <div className="flex justify-center items-center  flex-col">
                 <motion.p
                   layoutId={`description-${card.description}-${id}`}
-                  className="text-white dark:text-white font-bold font-arial text-xl text-center md:text-left"
+                  className="text-white  dark:text-white font-bold font-[serif] text-2xl text-center md:text-left"
                 >
                   {card.description}
                 </motion.p>
@@ -164,7 +164,7 @@ export const CloseIcon = () => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="h-4 w-4 text-black"
+      className="h-4 w-4 text-black font-[serif]"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M18 6l-12 12" />

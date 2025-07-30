@@ -29,8 +29,8 @@ import INSC from '/public/graphics/inscr.jpg'
   ];
   return (
     <div className="relative overflow-hidden w-full h-full py-20">
-        <h1 className="text-2xl text-white text-center pt-10 font-bold">Projects Corner :</h1>
-        <p className="text-white text-center p-10">We Have Great Projects in electronics and Web </p>
+        <h1 className="text-3xl text-white text-center pt-10 font-bold font-[serif]">Projects Corner :</h1>
+        <p className="text-white text-center p-10 font-[serif]">We Have Great Projects in electronics and Web </p>
       <Carousel slides={slideData} />
     </div>
   );
