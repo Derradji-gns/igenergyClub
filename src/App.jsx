@@ -14,6 +14,7 @@ import ExpandableCardDemo from './compenants/events'
  import CarouselDemo from './compenants/mgcd'
  import Foooter from './compenants/Foooter'
  import TimelineDemo from './compenants/time'
+ import General from './compenants/general'
 
 function App() {
 
@@ -24,8 +25,7 @@ function App() {
 
         <Example/>
         <BackgroundBeamsWithCollisionDemo/>
-        <ExpandableCardDemo/>
-        <Leaders/>
+        <General/>
         <CarouselDemo/>
         <TimelineDemo/>
         <InfiniteMovingCardsDemo/>

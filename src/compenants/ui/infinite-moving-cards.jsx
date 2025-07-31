@@ -4,6 +4,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { cn } from "./lib/utils.jsx";
 import TweetCard from "../tweet.jsx"; 
 
+
 export const InfiniteMovingCards = ({
   direction = "left",
   speed = "fast",
@@ -45,14 +46,14 @@ const tweets = [
   {
     name: "Bouarroudj Meriem",
     username: "meri_design",
-    content: "At IGEnergy, success is built on unity and collaboration. Differences in opinions and perspectives are natural, but progress comes when we set aside conflicts, work together with respect and determination.",
+    content: "At IGEnergy, success is built on unity and collaboration. Differences in opinions and perspectives are natural .",
     time: "10:05 AM · Dec 19, 2020",
     profileImg: "public/graphics/meriem.jpg",
   },
   {
     name: "Bendriss Anis",
     username: "anis_president",
-    content: "At IGEnergy, work is driven by passion, innovation, and collaboration. Every effort contributes to a shared vision of excellence and progress. ✨️",
+    content: "At IGEnergy, work is driven by passion, innovation, and collaboration. WE enjoy what we do together ✨️",
     time: "10:05 AM · Dec 19, 2020",
     profileImg:"public/graphics/anis.jpg",
   },
@@ -107,7 +108,7 @@ const tweets = [
   )}
 >
   {tweets.map((tweet, idx) => (
-    <li key={idx} className="w-120 md:w-[450px] shrink-0">
+    <li key={idx} className="w-110 md:w-[450px] shrink-0">
       <TweetCard {...tweet} />
     </li>
   ))}
