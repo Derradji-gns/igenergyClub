@@ -1,11 +1,9 @@
 'use client'
 
-import { useState } from 'react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import pic from "/public/graphics/igenergyy.png"
 
-export default function Example() {
-  const [menuOpen, setMenuOpen] = useState(false)
+export default function Nav({toggleSidebar}) {
 
   return (
     <div className="bg-gray-900">
@@ -26,45 +24,31 @@ export default function Example() {
 
               {/* Desktop: Sign in / Create account */}
               <div className="hidden lg:flex lg:items-center lg:space-x-6">
-                <a href="#" className="text-sm font-medium text-white hover:text-gray-800">
-                  Sign in
-                </a>
-                <span className="h-6 w-px bg-gray-200" />
-                <a href="#" className="text-sm font-medium text-white hover:text-gray-800">
-                  Create account
-                </a>
+              <button
+                type="button"
+                onClick={toggleSidebar}
+                className="lg:hidden ml-auto p-2 text-gray-400"
+              >
+                <span className="sr-only">Toggle menu</span>
+  
+              </button>
               </div>
 
               {/* Mobile: Hamburger button */}
               <button
                 type="button"
-                onClick={() => setMenuOpen(!menuOpen)}
+                onClick={toggleSidebar}
                 className="lg:hidden ml-auto p-2 text-gray-400"
               >
                 <span className="sr-only">Toggle menu</span>
-                {menuOpen ? (
-                  <XMarkIcon className="h-6 w-6" />
-                ) : (
-                  <Bars3Icon className="h-6 w-6" />
-                )}
+  
               </button>
             </div>
           </div>
         </nav>
 
         {/* Mobile Menu (Dropdown style) */}
-        {menuOpen && (
-          <div className="lg:hidden bg-white shadow-md border-t border-gray-200">
-            <div className="flex flex-col space-y-2 p-4">
-              <a href="#" className="text-base font-medium text-gray-700 hover:text-gray-900">
-                Sign in
-              </a>
-              <a href="#" className="text-base font-medium text-gray-700 hover:text-gray-900">
-                Create account
-              </a>
-            </div>
-          </div>
-        )}
+
       </header>
     </div>
   )
