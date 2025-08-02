@@ -1,55 +1,113 @@
-'use client'
-
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
+import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import pic from "/public/graphics/igenergyy.png"
+import Drop from "./drop.jsx"
+import Drop2 from '../../drop2.jsx'
 
-export default function Nav({toggleSidebar}) {
+const navigation = [
+  { name: 'Home', href: '/leaders.jsx', current: false },
+  { name: 'Events', href: '#', current: false },
+  { name: 'Team', href: '#', current: false },
+  { name: 'Platform', href: '#', current: false },
+]
 
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}
+
+export default function Nav() {
   return (
-    <div className="bg-gray-900">
-      <header className="relative bg-gray-900">
-        <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="border-b border-gray-200">
-            <div className="flex h-16 items-center justify-between">
-              
-              {/* Logo and Title */}
-              <div className="flex items-center space-x-3">
-                <img
-                  alt="Logo"
-                  src={pic}
-                  className="h-12 w-auto"
-                />
-                <span className="text-xl font-semibold font-[serif] text-white">IGENERGY</span>
-              </div>
+    <Disclosure as="nav" className="bg-gray-800">
+      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div className="relative flex h-16 items-center justify-between">
+          <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            {/* Mobile menu button*/}
+            <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset">
+              <span className="absolute -inset-0.5" />
+              <span className="sr-only">Open main menu</span>
+              <Bars3Icon
+                aria-hidden="true"
+                className="block size-6 group-data-open:hidden"
+              />
+              <XMarkIcon
+                aria-hidden="true"
+                className="hidden size-6 group-data-open:block"
+              />
+            </DisclosureButton>
+          </div>
+          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
+            <div className="flex shrink-0 items-center">
+              <img
+                alt="Your Company"
+                src={pic}
+                className="h-16 w-auto"
+              />
+            </div>
+            <div className="hidden sm:ml-6 sm:block">
+              <div className="flex pt-3 space-x-4">
+                <a className="text-gray-300 hover:bg-gray-700 hover:text-white
+                block rounded-md px-3 py-2 text-base font-medium" href="">Home</a>
+                <Drop2/>
+          <a className="text-gray-300 hover:bg-gray-700 hover:text-white
+                block rounded-md px-3 py-2 text-base font-medium" href="">Team</a>
+                <a className="text-gray-300 hover:bg-gray-700 hover:text-white
+                block rounded-md px-3 py-2 text-base font-medium" href="">Platform</a>
 
-              {/* Desktop: Sign in / Create account */}
-              <div className="hidden lg:flex lg:items-center lg:space-x-6">
-              <button
-                type="button"
-                onClick={toggleSidebar}
-                className="lg:hidden ml-auto p-2 text-gray-400"
-              >
-                <span className="sr-only">Toggle menu</span>
-  
-              </button>
               </div>
-
-              {/* Mobile: Hamburger button */}
-              <button
-                type="button"
-                onClick={toggleSidebar}
-                className="lg:hidden ml-auto p-2 text-gray-400"
-              >
-                <span className="sr-only">Toggle menu</span>
-  
-              </button>
             </div>
           </div>
-        </nav>
+          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+            {/* Profile dropdown */}
+            <Menu as="div" className="relative ml-3">
+              <MenuItems
+                transition
+                className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
+              >
+                <MenuItem>
+                  <a
+                    href="#"
+                    className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:outline-hidden"
+                  >
+                    Your Profile
+                  </a>
+                </MenuItem>
+                <MenuItem>
+                  <a
+                    href="#"
+                    className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:outline-hidden"
+                  >
+                    Settings
+                  </a>
+                </MenuItem>
+                <MenuItem>
+                  <a
+                    href="#"
+                    className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:outline-hidden"
+                  >
+                    Sign out
+                  </a>
+                </MenuItem>
+              </MenuItems>
+            </Menu>
+          </div>
+        </div>
+      </div>
 
-        {/* Mobile Menu (Dropdown style) */}
-
-      </header>
-    </div>
-  )
+      <DisclosurePanel className="sm:hidden">
+        <div className="space-y-1 px-2 pt-2 pb-3">
+          
+           
+          <a className="text-gray-300 hover:bg-gray-700 hover:text-white
+                block rounded-md px-3 py-2 text-base font-medium" href="">Home</a>
+                <Drop />
+          <a className="text-gray-300 hover:bg-gray-700 hover:text-white
+                block rounded-md px-3 py-2 text-base font-medium" href="">Team</a>
+                <a className="text-gray-300 hover:bg-gray-700 hover:text-white
+                block rounded-md px-3 py-2 text-base font-medium" href="">Platform</a>
+          
+        </div>
+      </DisclosurePanel>
+    </Disclosure>
+  );
 }
+

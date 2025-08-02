@@ -1,6 +1,5 @@
 import './App.css'
 import Nav from './compenants/NNAv'
-import Header from './compenants/header'
 import Events from './compenants/section1'
 import Leaders from './compenants/leaders'
 import Community from './compenants/com'
