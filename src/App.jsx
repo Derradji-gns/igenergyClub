@@ -13,25 +13,49 @@ import ExpandableCardDemo from './compenants/events'
  import Foooter from './compenants/Foooter'
  import TimelineDemo from './compenants/time'
  import General from './compenants/general'
+ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 function App() {
 
   return (
     
     
-      <div className='bg-gray-900'>
-
+      <Router>
         <Nav/>
-        <BackgroundBeamsWithCollisionDemo/>
+        <Routes>
+          <Route path="/igenergyClub" element={
+            <>
+            <div className='bg-gray-900'>
+            
+            <BackgroundBeamsWithCollisionDemo/>
         <General/>
         <CarouselDemo/>
         <TimelineDemo/>
         <InfiniteMovingCardsDemo/>
-        <Foooter/>
+        
+        </div>
+            </>
+          }/>
+
+          <Route path="/Team" element={
+            <>
+            <Leaders/>
+            
+            </>
+          }/>
+
+          
+
+      
+
+        
+        
+        
 
     
-
-      </div>
+       </Routes>
+       <Foooter/>
+     </Router>
         
   
   )

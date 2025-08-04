@@ -4,7 +4,7 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 export default function Drop() {
   return (
     <Menu as="div" className="relative  inline-block">
-      <MenuButton className=" px-3 py-2 flex items-center w-[25rem] justify-between gap-x-1.5 hover:bg-gray-700 hover:text-white  rounded-md bg-gray-800  text-sm  font-semibold text-gray-300">
+      <MenuButton className=" px-3 py-2 flex items-center w-[14rem] justify-between gap-x-1.5 hover:bg-gray-700 hover:text-white  rounded-md bg-gray-800  text-sm  font-semibold text-gray-300">
         <p className="">Events</p>
         <ChevronDownIcon aria-hidden="true" className="-mr-1 size-5 text-gray-400" />
       </MenuButton>

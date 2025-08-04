@@ -1,134 +1,130 @@
 import "tailwindcss";
+import anis from "/public/graphics/anis.jpg";
+import sun from "/public/graphics/sun.jpg";
+import walid from "/public/graphics/walid.jpg";
+import me from "/public/graphics/me.jpg"
+import ali from "/public/graphics/ali2.jpg"
+import moncef from "/public/graphics/moncef.jpg"
+import waheb from "/public/graphics/waheb.jpg"
+import farah from "/public/graphics/farah3.jpg"
+import nour from "/public/graphics/nour.jpg"
+import billal from "/public/graphics/2098873.svg"
+import amina from "/public/graphics/amina.jpg"
+import akram from "/public/graphics/akram1.jpg"
+import sara from "/public/graphics/2098873.svg"
+import boubi from "/public/graphics/2098873.svg"
+import yasin from "/public/graphics/yasin.jpg"
+import abla from "/public/graphics/2098873.svg"
+import isra from "/public/graphics/2098873.svg"
+import moffouk from "/public/graphics/moffouk.jpg"
+import mazouzi from "/public/graphics/mazouzi.jpg"
 
 const people = [
-    {
-      name: 'Bendriss Anis',
-      role: 'President | Premium Member',
-      imageUrl:
-        './graphics/anis.jpg',
-    },
+  {
+    name: "Bendriss Anis",
+    role: "President | Premium Member",
+    imageUrl: anis,
+  },
+  {
+    name: "Hadjij Chourouk",
+    role: "Vice President | Designer",
+    imageUrl: sun,
+  },
 
-    {
-            name: 'Hadjij Chourouk',
-    role: 'Vice President | Designer',
-    imageUrl:'./graphics/sun.jpg',
-    },
+  {
+    name: "Benouali Omar Walid",
+    role: "Ex president | Premium Member",
+    imageUrl: walid,
+  },
+  {
+    name: "Derradji Amine Abdelbasset ",
 
-    {
-        name : "Benouali Omar Walid",
-        role:'Ex president | Premium Member',
-        imageUrl:'./graphics/walid.jpg'
-    },
-    {
-      name:'Derradji Amine Abdelbasset ',
+    role: "EX President of RE Department | Developer",
 
+    imageUrl: me,
+  },
+  {
+    name: "Taleb Ali",
+    role: "Secretary General",
+    imageUrl: ali,
+  },
+  {
+    name: "Sibelkhir Moncef",
 
-      role:'EX President of RE Department | Developer',
+    role: "  President of Developemnt Department",
 
-      imageUrl:'./graphics/me.jpg'
-  }, 
-{
-        name: 'Taleb Ali',
-        role:'Secretary General',
-         imageUrl:'./graphics/ali2.jpg'
+    imageUrl: moncef,
+  },
+  {
+    name: "Guerroudj Abdelwaheb",
+    role: "Ex vice president | Social Media Manager",
+    imageUrl: waheb,
+  },
+  {
+    name: "Farah Messaouden",
+    role: "president of Design Department",
 
-    },
-    {
-        name:"Sibelkhir Moncef",
+    imageUrl: farah,
+  },
+  {
+    name: "Bouziane Mohammed",
+    role: "Ex vice President of interior relations ",
+    imageUrl: boubi,
+  },
+  {
+    name: "Nour Meriem",
+    role: "President of Communication Department",
+    imageUrl: nour,
+  },
+  {
+    name: "Touati Billal",
+    role: " President of Social Media Department",
+    imageUrl: billal,
+  },
 
-        role:"  President of Developemnt Department",
+  {
+    name: "Rouba Amina",
+    role: "Designer",
+    imageUrl: amina,
+  },
 
-        imageUrl:"./graphics/nmoncef.jpg"
-    },
-    {
-      name:"Guerroudj Abdelwaheb",
-      role:"Ex vice president | Social Media Manager",
-      imageUrl:"./graphics/waheb.jpg"
-    },
-    {
-      name:"Farah Messaouden",
-      role:"president of Design Department",
+  {
+    name: "Tayeb-Bey Akram",
+    role: "RE Manager",
+    imageUrl: akram,
+  },
+  {
+    name: "Achouri Sara",
+    role: "Ex Vice President of External Relations",
+    imageUrl: sara,
+  },
+  {
+    name: "Soufi Yacine",
+    role: "Designer",
+    imageUrl: yasin,
+  },
+  {
+    name: "Djemai Abla",
+    role: "Active Membre",
+    imageUrl: abla,
+  },
+  {
+    name: "Ghedir Israa",
+    role: "Active Membre ",
+    imageUrl: isra,
+  },
 
-      imageUrl:"./graphics/farah3.jpg",
+  {
+    name: "Mohamed Moffouk",
+    role: "Active Membre",
+    imageUrl: moffouk,
+  },
+      {
+            name: 'Mazouzi Amine',
+    role: 'Active Member',
+    imageUrl: mazouzi,
     },
-    {
-      name:"Nour Meriem",
-      role:"President of Communication Department",
-      imageUrl:"./graphics/nour.jpg",
-    },
-    {
-      name:"Touati Billal",
-      role:" President of Social Media Department",
-      imageUrl:"./graphics/billal.jpg"
-    },
-
-    {
-      name : "Rouba Amina",
-      role:"Designer",
-      imageUrl :'./graphics/amina.jpg'
-    },
-    {
-      name:"Bouarroudj Meriem",
-      role:"Ex President of Dev Department | Project Department | Premium Member",
-      imageUrl:"./graphics/meriem.jpg"
-    },
-    {
-      name:"Tayeb-Bey Akram",
-      role:"RE Manager",
-      imageUrl:"./graphics/akram1.jpg"
-    },
-    {
-      name:"Dahmene Chaima",
-      role:"Social Media | Sponsorship",
-      imageUrl:"./graphics/2098873.svg",
-    },
-    {
-      name:"Achouri Sara",
-      role:"Ex Vice President of External Relations",
-      imageUrl:"./graphics/2098873.svg",
-    },
-    {
-      name:"Boudelal Abderrahman",
-      role:"EX president of Design Department | Premium Member",
-      imageUrl:"./graphics/boud.jpg"
-    },
-    {
-      name:" Hassani Kawther",
-      role:"EX Vice President | Premium Member",
-      imageUrl:"./graphics/kawter.jpg"
-    },
-    {
-      name:"Bouziane Mohammed",
-      role:"Ex vice President of interior relations ",
-      imageUrl:"./graphics/bouby.JPG"
-    }, 
-    {
-      name:"Soufi Yacine",
-      role:"Designer",
-      imageUrl:"./graphics/yasin.jpg",
-    },
-    {
-      name:"Djemai Abla",
-      role:"Active Membre",
-      imageUrl:"./graphics/2098873.svg"
-    },
-    {
-      name:"Ghedir Israa",
-      role:"Active Membre ",
-      imageUrl:"./graphics/2098873.svg",
-    },
-
-    {
-      name:"Grine Soundouss",
-      role:"Active Membre",
-      imageUrl:"./graphics/soun.jpg"
-    },
-    {
-      name:"Dadda Amani",
-      role:"Social Media Manager | Photographer",
-      imageUrl:"/public/graphics/dada.jpg"
-    }
-  ]
+];
   
   export default function Leaders() {
     return (
@@ -142,13 +138,13 @@ const people = [
               We  have great members who together form the Egenergy community which is the secret of our success and continuous development.
             </p>
           </div>
-          <ul role="list" className="grid gap-x-8 gap-y-12 h-200 overflow-scroll overflow-x-hidden sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
+          <ul role="list" className="grid gap-x-8 gap-y-12 h-auto   sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
             {people.map((person) => (
               <li key={person.name}>
                 <div className="flex items-center gap-x-6">
                   <img alt="" width="100px" src={person.imageUrl} className="size-16 rounded-full" />
                   <div>
-                    <h3 className="text-base/7 font-semibold tracking-tight text-yellow-300 font-[serif]">{person.name}</h3>
+                    <h3 className="text-base/7 font-semibold tracking-tight text-white font-[serif]">{person.name}</h3>
                     <p className="text-sm/6 font-semibold text-white font-[serif]">{person.role}</p>
                   </div>
                 </div>
