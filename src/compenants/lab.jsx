@@ -1,5 +1,5 @@
 
-function Hour() {
+function Lab() {
     return (
   <div className="bg-gray-900 w-full h-auto ">
 
@@ -169,4 +169,4 @@ function Hour() {
     );
   };
   
-  export default Hour;
+  export default Lab;

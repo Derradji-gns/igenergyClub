@@ -14,6 +14,11 @@ import ExpandableCardDemo from './compenants/events'
  import TimelineDemo from './compenants/time'
  import General from './compenants/general'
  import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+ import Teach from './compenants/teach'
+import Energy from './compenants/energy'
+import Lab from './compenants/lab'
+import IT from './compenants/it'
+import Hour from './compenants/hour'
 
 function App() {
 
@@ -40,6 +45,38 @@ function App() {
           <Route path="/Team" element={
             <>
             <Leaders/>
+            
+            </>
+          }/>
+          <Route path="/Teach" element={
+            <>
+            <Teach/>
+            </>
+          }/>
+
+                    <Route path="/Energy" element={
+            <>
+            <Energy/>
+            </>
+          }/>
+
+          <Route path="/Lab" element={
+            <>
+            <Lab/>
+            
+            </>
+          }/>
+
+          <Route path="/IT" element={
+            <>
+            <IT/>
+            </>
+          }/>
+
+          <Route path="/Hour" element={
+            <>
+
+            <Hour/>
             
             </>
           }/>

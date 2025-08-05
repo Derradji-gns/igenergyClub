@@ -1,5 +1,6 @@
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import { Link } from 'react-router-dom'
 
 export default function Drop() {
   return (
@@ -15,45 +16,50 @@ export default function Drop() {
       >
         <div className="py-1">
           <MenuItem>
+          <Link to="/Teach">
             <a
-              href="#"
+              
               className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden"
             >
               Tech Hub
-            </a>
+            </a></Link>
           </MenuItem>
           <MenuItem>
+          <Link to="/IT">
             <a
               href="#"
               className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden"
             >
               IT Day
-            </a>
+            </a></Link>
           </MenuItem>
           <MenuItem>
+          <Link to="/Lab">
             <a
               href="#"
               className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden"
             >
               Tech Lab
-            </a>
+            </a></Link>
           </MenuItem>
           <MenuItem>
+          <Link to="/Energy">
             <a
               href="#"
               className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden"
             >
               Energy Space
-            </a>
+            </a></Link>
           </MenuItem>
           <form action="#" method="POST">
             <MenuItem>
+            <Link to="/Hour">
               <button
                 type="submit"
                 className="block w-full px-4 py-2 text-left text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden"
               >
                 Hour of Code
-              </button>
+              </button></Link>
             </MenuItem>
           </form>
         </div>
