@@ -115,8 +115,8 @@ const people = [
   },
 
   {
-    name: "Mohamed Moffouk",
-    role: "Active Membre",
+    name: "Mohammed Mouffok",
+    role: "Active Member | artist",
     imageUrl: moffouk,
   },
       {

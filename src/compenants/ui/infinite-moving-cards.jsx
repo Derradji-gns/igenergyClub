@@ -2,7 +2,14 @@
 
 import React, { useEffect, useState, useRef } from "react";
 import { cn } from "./lib/utils.jsx";
-import TweetCard from "../tweet.jsx"; 
+import TweetCard from "../tweet.jsx";
+import me from "/public/graphics/me.jpg"
+import sun from "/public/graphics/sun.jpg"
+import walid from "/public/graphics/walid.jpg"
+import meriem from "/public/graphics/meriem.jpg"
+import anis from "/public/graphics/anis.jpg";
+
+
 
 
 export const InfiniteMovingCards = ({
@@ -26,7 +33,7 @@ const tweets = [
     username: "amine_dev",
     content: "For me IGENERGY was a great opportunity to show my abilities and practise all what I learn before .",
     time: "10:05 AM · May 09, 2025",
-    profileImg: "public/graphics/me.jpg",
+    profileImg: me,
   },
 
     {
@@ -34,28 +41,28 @@ const tweets = [
     username: "Hadjij_sun",
     content: "نحن دائما نسعى لتقديم أفضل ما نملك من أجل إحياء روح الفريق و المضي قُدمًا نحو فرص جديدة . هذه عائلتنا ❤️",
     time: "10:05 AM · Dec 19, 2024",
-    profileImg: "public/graphics/sun.jpg",
+    profileImg: sun,
   },
   {
     name: "Benouali Omar Walid",
     username: "Walid_exP",
     content: "IGENERGY n'est pas seulement un club, c'est une famille où chacun trouve sa place et grandit ensemble ! ❤️🙂",
         time: "10:05 AM · Fev 24, 2022",
-    profileImg: "public/graphics/walid.jpg",
+    profileImg: walid,
   },
   {
     name: "Bouarroudj Meriem",
     username: "meri_design",
     content: "At IGEnergy, success is built on unity and collaboration. Differences in opinions and perspectives are natural .",
     time: "10:05 AM · Dec 19, 2020",
-    profileImg: "public/graphics/meriem.jpg",
+    profileImg: meriem,
   },
   {
     name: "Bendriss Anis",
     username: "anis_president",
     content: "At IGEnergy, work is driven by passion, innovation, and collaboration. WE enjoy what we do together ✨️",
     time: "10:05 AM · Dec 19, 2020",
-    profileImg:"public/graphics/anis.jpg",
+    profileImg:anis,
   },
 ];
 

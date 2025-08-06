@@ -19,20 +19,20 @@ import Energy from './compenants/energy'
 import Lab from './compenants/lab'
 import IT from './compenants/it'
 import Hour from './compenants/hour'
-
+import { FlipWordsDemo } from './compenants/hdr'
 function App() {
 
   return (
     
     
-      <Router>
+      <Router >
         <Nav/>
         <Routes>
           <Route path="/igenergyClub" element={
             <>
             <div className='bg-gray-900'>
             
-            <BackgroundBeamsWithCollisionDemo/>
+            <FlipWordsDemo/>
         <General/>
         <CarouselDemo/>
         <TimelineDemo/>
