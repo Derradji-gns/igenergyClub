@@ -5,12 +5,18 @@ import RC from '/public/graphics/car.jpg'
 import SP from '/public/graphics/parking2.jpg'
 import RDR from '/public/graphics/radar.jpg'
 import INSC from '/public/graphics/inscr.jpg'
+import academy from "/public/graphics/IG_academy.jpg"
  function CarouselDemo() {
   const slideData = [
     {
       title: "RC Car",
       
       src: RC,
+    },
+      {
+      title: "IG Academy",
+      
+      src: academy,
     },
     {
       title: "Smart Park",
